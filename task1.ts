@@ -86,7 +86,7 @@ class Triangle extends Figure {
     private readonly side3: number,
   ) {
     // Указание типа при создании класса
-    if (side1 < side2 + side3 || side2 < side1 + side3 || side3 < side1 + side2) {
+    if (side1 >= side2 + side3 || side2 >= side1 + side3 || side3 >= side1 + side2) {
       throw new Error("Invalid triangle: sum of any two sides must be greater than the third");
     }
     super(FigureType.Triangle);
